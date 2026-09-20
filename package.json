@@ -1,0 +1,17 @@
+{
+  "name": "levenshtein-edit-distance",
+  "version": "0.1.0",
+  "description": "Computes the minimum number of single-character edits (insertions, deletions, substitutions) needed to transform one string into another.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {}
+}
