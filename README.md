@@ -27,3 +27,10 @@ Returns a 2D array of size `(a.length + 1) x (b.length + 1)`, where `matrix[i][j
 ## Edge cases
 
 Strings are compared by UTF-16 code units, not by Unicode code points. This means an emoji such as 😀 (two code units) and 😃 (two different code units) have distance 2, not 1. If you need code point awareness, you must normalise or split the strings before calling these functions.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
